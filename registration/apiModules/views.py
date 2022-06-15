@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from api.registration.apiModules import serializers
-from api.registration import models
+from registration.apiModules import serializers
+from registration import models
 
 
 class RegistrationViewSet(viewsets.ModelViewSet):
