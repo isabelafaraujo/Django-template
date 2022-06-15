@@ -57,3 +57,38 @@ estado = models.CharField(max_length=70)
 cep = models.IntegerField()
 ```
 
+#### Files: API.serializer e API.view  
+
+For project organization, inside each application's directory, a folder must be created for the serializers and views of that respective application 
+
+##### Serializer 
+
+The principle of a serializer is to transform data so that it can be stored and transmitted to be utilized in other context but without losing information, even if its format is different. Some can be simple, just to map data like a dictionary, others can be more complex at the point of executing validations that can check the final data translation process. In this case, all the fields in the model were added, this was made explicit in the line 
+```
+fields = '_all_' 
+```
+
+##### View
+
+The view is responsible for joining what has been translated in the serializer, that is, what has been defined in the model, and delivering it to a template. It is in this layer that the application logic is defined. 
+
+#### Routes
+
+To create the routes, the file urls.py needs to be changed. In this file all routes to access the API will be created.
+
+#### Update API
+
+Finally, it is necessary to update the model with everything that has been created, for this the following command is necesary:
+```
+python manage.py makemigrations
+```
+
+And to include the changes in the database 
+```
+python manage.py migrate
+```
+
+And to test 
+```
+python manage.py runserver
+```
