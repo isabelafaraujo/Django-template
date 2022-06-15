@@ -13,36 +13,36 @@ This project is a creation of a simple template for django application. Contains
 pip install django djangorestframework
 ```
 
-3. Now the packages related to the API will be created inside the project folder, so be careful to type the following command inside the correct directory. This step is very important 
+3. Now the packages related to the API will be created inside the project folder, so be careful to type the following command inside the correct directory. This step is very important: 
    1. Note: library can be renamed to a setup
 ```
 django-admin startproject library .
 ```
 
-4. The next step is to install the application inside the created folder, one API can have many applications, in this case, it is going to be called Registration, since it will simulate a data registration 
+4. The next step is to install the application inside the created folder, one API can have many applications, in this case, it is going to be called Registration, since it will simulate a data registration: 
 ```
 django-admin startapp registration
 ```
 
-At this point it is possible to start the application using the command
+At this point it is possible to start the application using the command:
 ```
 python manage.py runserver
 ```
 
 ### Configuration
 
-Django by default creates a MySQL database. To finish configuring this part of the project, some settings are required. First, a database migration is requested so that some standard tables are created
+Django by default creates a MySQL database. To finish configuring this part of the project, some settings are required. First, a database migration is requested so that some standard tables are created.
 ```
 python manage.py migrate 
 ```
 
 #### File: settings.py
 
-You can access all the project's settings in the file settings.py, including the settings for the database that was created
+You can access all the project's settings in the file settings.py, including the settings for the database that was created.
 
 ##### File: settings.py - Installed apps
 
-In the installed files section you need to add all the applications that were included during the creation of the project. In this example, the registration application has been created, so at the end of the list the name will be added according to the name you created. It is also necessary to inform which framework is being used, in this case 'rest_framework' must be added to the end of the list too
+In the installed files section you need to add all the applications that were included during the creation of the project. In this example, the registration application has been created, so at the end of the list the name will be added according to the name you created. It is also necessary to inform which framework is being used, in this case 'rest_framework' must be added to the end of the list too.
 
 ### API files 
 
@@ -59,11 +59,11 @@ cep = models.IntegerField()
 
 #### Files: API.serializer e API.view  
 
-For project organization, inside each application's directory, a folder must be created for the serializers and views of that respective application 
+For project organization, inside each application's directory, a folder must be created for the serializers and views of that respective application. 
 
 ##### Serializer 
 
-The principle of a serializer is to transform data so that it can be stored and transmitted to be utilized in other context but without losing information, even if its format is different. Some can be simple, just to map data like a dictionary, others can be more complex at the point of executing validations that can check the final data translation process. In this case, all the fields in the model were added, this was made explicit in the line 
+The principle of a serializer is to transform data so that it can be stored and transmitted to be utilized in other context but without losing information, even if its format is different. Some can be simple, just to map data like a dictionary, others can be more complex at the point of executing validations that can check the final data translation process. In this case, all the fields in the model were added, this was made explicit in the line: 
 ```
 fields = '_all_' 
 ```
@@ -83,12 +83,12 @@ Finally, it is necessary to update the model with everything that has been creat
 python manage.py makemigrations
 ```
 
-And to include the changes in the database 
+And to include the changes in the database: 
 ```
 python manage.py migrate
 ```
 
-And to test 
+And to test: 
 ```
 python manage.py runserver
 ```
