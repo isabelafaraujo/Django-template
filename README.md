@@ -44,7 +44,7 @@ You can access all the project's settings in the file settings.py, including the
 
 In the installed files section you need to add all the applications that were included during the creation of the project. In this example, the registration application has been created, so at the end of the list the name will be added according to the name you created. It is also necessary to inform which framework is being used, in this case 'rest_framework' must be added to the end of the list too
 
-### Creating the API 
+### API files 
 
 #### File: models.py 
 
