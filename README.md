@@ -24,7 +24,7 @@ django-admin startproject library .
 django-admin startapp registration
 ```
 
-At this point it is possible to start the application using the command:
+At this point it is possible to start the application using the command: 
 ```
 python manage.py runserver
 ```
