@@ -5,16 +5,16 @@ This project is a creation of a simple template for django application. Contains
 ### Installation
 
 1. Virtual environment
-1.1. First a virtual environment must be created for the installation of the other packages that will be needed for the application. For this project the Intellij Community IDE will be used. 
+   ⋅⋅* First a virtual environment must be created for the installation of the other packages that will be needed for the application. For this project the Intellij Community IDE will be used. 
 
 2. Django Installation
-2.1 To install the django framework it is necessary to use the command below
+   ⋅⋅* To install the django framework it is necessary to use the command below
 ```
 pip install django djangorestframework
 ```
 
 3. Now the packages related to the API will be created inside the project folder, so be careful to type the following command inside the correct directory. This step is very important
-Note: library can be renamed to a setup
+   ⋅⋅* Note: library can be renamed to a setup
 ```
 django-admin startproject library .
 ```
