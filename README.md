@@ -76,7 +76,7 @@ The view is responsible for joining what has been translated in the serializer, 
 
 To create the routes, the file urls.py needs to be changed. In this file all routes to access the API will be created.
 
-#### Update API
+### Update API
 
 Finally, it is necessary to update the model with everything that has been created, for this the following command is necesary:
 ```
